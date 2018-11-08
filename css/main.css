@@ -1,0 +1,87 @@
+* {
+  margin: 0 0;
+  padding: 0 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.bg_ban {
+  position: relative;
+  width: 100%;
+  height: 35%;
+  background-color: red;
+  background-image: url("../img/new_top.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.bg_ban .ban_title {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 3.5rem;
+  color: white;
+}
+.bg_ban .ban_title .pic {
+  display: inline-block;
+  float: left;
+  margin: 0.3rem;
+  width: 3rem;
+  height: 2.8rem;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url("../img/tx.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg_ban .ban_title .title {
+  display: block;
+  font-size: 1.3rem;
+}
+.bg_ban .ban_title .time {
+  float: right;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+.card_list {
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+}
+.card_list li {
+  height: 6rem;
+  border-bottom: 1px solid #bdbdbd;
+}
+.card_list .con_pic {
+  display: block;
+  float: left;
+  margin: 0.5rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  border-radius: 15%;
+  background-image: url("../img/new_top.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.card_list span {
+  display: block;
+  margin-bottom: 0.01rem;
+}
+.card_list .c_title {
+  position: relative;
+  top: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.card_list .c_text {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.card_list .c_time {
+  font-size: 0.7rem;
+}

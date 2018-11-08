@@ -1,0 +1,91 @@
+*{
+  margin:0 0;
+  padding:0 0;
+}
+html,body{
+    width: 100%;
+    height:100%;
+}
+// 函数定义
+//img加载图片函数
+.img-url(@img_url,@size,@position,@repeat){
+    background-image:@img_url;
+    background-size: @size;
+    background-position:@position;
+    background-repeat:@repeat;
+}
+.bg_ban{
+    position: relative;
+    width: 100%;
+    height: 35%;
+    background-color:red;
+    .img-url(url("../img/new_top.png"),cover,top,no-repeat);
+    .ban_title{
+        position:absolute;
+        bottom:0px;
+        width: 100%;
+        height: 3.5rem;
+        color:white;
+        .pic{
+            display:inline-block;
+            float: left;
+            margin:0.3rem;
+            width: 3rem;
+            height: 2.8rem;
+            background-color: #fff;
+            border-radius: 50%;
+            .img-url(url("../img/tx.jpg"),contain,center,no-repeat);
+
+        }
+        .title{
+            display:block;
+            font-size: 1.3rem;
+        }
+        .time{
+            float: right;
+            font-size:0.8rem;
+            margin-right:0.5rem;
+        }
+    }
+}
+
+.card_list{
+        height:auto;                     //高度自适应？
+        width: 90%;
+        margin:0 auto;
+    li{
+        height:6rem;
+        border-bottom:1px solid rgb(189,189,189);
+    }
+    .con_pic{
+        display:block;
+        float: left;
+        margin:0.5rem;
+        width: 5rem;
+        height: 5rem;
+        background-color: #fff;
+        border-radius: 15%;
+        .img-url(url("../img/new_top.png"),cover,top,no-repeat);
+
+    }
+    span{
+        display:block;
+        margin-bottom:0.01rem;
+        
+    }
+    .c_title{
+        position: relative;              //相对定位
+        top:0.4rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+
+    }
+    .c_text{
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+    .c_time{
+        font-size: 0.7rem;
+    }
+}
+
