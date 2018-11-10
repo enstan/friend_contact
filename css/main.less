@@ -1,11 +1,3 @@
-*{
-  margin:0 0;
-  padding:0 0;
-}
-html,body{
-    width: 100%;
-    height:100%;
-}
 // 函数定义
 //img加载图片函数
 .img-url(@img_url,@size,@position,@repeat){
@@ -14,41 +6,69 @@ html,body{
     background-position:@position;
     background-repeat:@repeat;
 }
+.btn-class(@width,@heigth,@style,@bgc,@radius){
+    display:block;
+    margin:0 auto;
+    width: @width;
+    height: @heigth;
+    text-align: center;
+    line-height: @heigth;
+    border-radius: @radius;
+
+    color:black; 
+    background: @bgc;
+    span{
+        width: @width;
+        height: 100%;
+        line-height:50%;
+    }
+}
+//text样式
+.tx_icon{
+    display:inline-block;
+    width: 3rem;
+    height: 2.8rem;
+    background-color: #fff;
+    border-radius: 50%;
+    .img-url(url("../img/tx.jpg"),contain,center,no-repeat);
+}
+.tx_icon(@width,@heigth,@img,@radius){
+    display:inline-block;
+    width: @width;
+    height: @heigth;
+    border-radius: @radius;
+    .img-url(url("../img/demo1.png"),cover,center,no-repeat);
+}
 .bg_ban{
     position: relative;
     width: 100%;
     height: 35%;
     background-color:red;
-    .img-url(url("../img/new_top.png"),cover,top,no-repeat);
-    .ban_title{
-        position:absolute;
-        bottom:0px;
-        width: 100%;
-        height: 3.5rem;
-        color:white;
-        .pic{
-            display:inline-block;
-            float: left;
-            margin:0.3rem;
-            width: 3rem;
-            height: 2.8rem;
-            background-color: #fff;
-            border-radius: 50%;
-            .img-url(url("../img/tx.jpg"),contain,center,no-repeat);
-
-        }
-        .title{
-            display:block;
-            font-size: 1.3rem;
-        }
-        .time{
-            float: right;
-            font-size:0.8rem;
-            margin-right:0.5rem;
-        }
-    }
+    .img-url(url("../img/new_top.png"),cover,left,no-repeat);
+    color:white;
 }
 
+.ban_title{
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    height: 3.5rem;
+    color:white;
+    .pic{
+        float: left;
+        margin:0.3rem;
+        .tx_icon
+    }
+    .title{
+        display:block;
+        font-size: 1.3rem;
+    }
+    .time{
+        float: right;
+        font-size:0.8rem;
+        margin-right:0.5rem;
+    }
+}
 .card_list{
         height:auto;                     //高度自适应？
         width: 90%;
@@ -66,12 +86,10 @@ html,body{
         background-color: #fff;
         border-radius: 15%;
         .img-url(url("../img/new_top.png"),cover,top,no-repeat);
-
     }
     span{
         display:block;
         margin-bottom:0.01rem;
-        
     }
     .c_title{
         position: relative;              //相对定位
@@ -89,3 +107,207 @@ html,body{
     }
 }
 
+
+//feed页面
+.feed_list,.fd_list{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top:20%;
+    overflow:auto;
+
+    li{
+        position: relative;
+        width: 100%;
+        height: 45%;
+        overflow:auto;
+    }
+    .d_pic{
+        position: relative;
+        width: 100%;
+        height:60%;
+        .img-url(url('../img/air_port.png'),cover,top,no-repeat);
+        .d_tx{
+            position: absolute;
+            bottom:-1rem;
+            left:1rem;
+        }
+    }
+    .con_text{
+        width: 100%;
+        padding:0 10%;
+        height: auto;
+        margin:0 auto;
+        margin-top:0.8rem;
+        bottom:-0.051rem;
+        .dc_title{
+            font-size: 1.5rem;
+        }
+        .dc_content{
+            font-size: 1.1rem;
+        }
+        //文本样式设置
+        div{                                         //div的内容自适应
+            height: auto;
+            overflow:hidden;
+            display:block;
+        }
+        a{
+            display: block;
+            width: 0.8rem;
+            height: 1rem;
+        }
+        .fav{
+            float:left;
+            .img-url(url('../img/love.png'),contain,top,no-repeat);
+        }
+        .com{
+            float:right;
+            .img-url(url('../img/comment.png'),contain,top,no-repeat);
+        }
+        .d_name{
+            font-size:1rem;
+            float: left;
+        }
+        .d_time{
+            float:right;
+        }
+    }
+
+    .ban_title{
+        position: relative;
+        border-top: 1px solid gainsboro;
+        margin:0.5rem auto;
+        padding:0.8rem;
+        .pic{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+.foot_contain{
+    position: fixed;
+    bottom:0px;
+    width: 20rem;
+    height: 2.5rem;
+    border: 1px solid gainsboro;
+    input{
+        display: block;
+        float:left;
+        width: 16rem;
+        height: 2.5rem;
+        background-color:rgb(225,225,225);
+    }
+    .re_btn{
+        display:inline;
+        float:right;
+        width: 3.899rem;
+        height: 2.5rem;
+        background:linear-gradient(to right,rgb(255,44,85),red);
+        cursor: pointer;
+
+        padding-left:0.8rem;
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+        color:white;
+    }
+}
+//feed_detail页面
+
+//profile页面设置
+.pro_bg{
+    .bg_ban;
+    text-align: center;
+    .pro_tx{
+        position: relative;
+        margin-top:3rem;
+        .tx_icon;
+        width: 5rem;
+        height: 5rem;
+    }
+    span{
+        display:block;
+    }
+    .name{
+        font-size: 1.1rem;
+    }
+}
+.pro_more{
+    display:block;
+    width: 100%;
+    height: 2rem;
+    border:1px solid gainsboro;
+    color:black;
+    span{
+        display: block;             //行高设置前需设置block;
+        height: 100%;
+        line-height:100%;      
+        margin:2.5%;
+    }
+    span:nth-child(1){
+        float: left;
+    }
+    span:nth-child(2){
+        float: right;
+    }
+}
+//timeline页面
+.fd_list{
+    .t_list{
+        position: relative;
+        width: 17.5rem;
+        float: right;
+        padding:1rem 1rem;
+        padding-left:1.5rem;
+        border-left:1px solid gainsboro;
+        .tx{
+            .tx_icon;
+            position:absolute;
+            left:-1rem;
+            width: 2rem;
+            height: 2rem;
+            margin-top:1rem;
+        }
+        .d_name{
+            
+            font-weight: bold;
+
+        }
+        .d_time{
+            margin-top:3%;
+            font-size: 0.7rem;
+        }
+        .com_ico{
+            border-bottom:1px solid gainsboro;
+            padding-bottom:0.8rem;
+
+        }
+    }
+}
+
+//people页面
+.peo_more{
+    .pro_more;
+    position:fixed;
+    bottom:0px;
+    text-align: center;
+    span{
+        width: 100%;
+    }
+}
+.invite{
+    .btn-class(10rem,2rem,null,linear-gradient(to right,rgb(255,44,85),red),2rem);
+    position: relative;
+    margin-top:3.5rem;
+    color:white;
+    font-weight: bold;
+}
+.p_con{
+    text-align: center;
+}
+.p_tx{
+    .tx_icon(4rem,4rem,url("../img/demo1.png"),2.5rem);
+}
+.comlist{
+   // height:60%;
+}

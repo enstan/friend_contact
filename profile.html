@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/hc-offcanvas-nav.css" />
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+
+    <script type="text/javascript" src="./js/vue.min.js"></script>
+    <script type="text/javascript" src="./js/hammer.js"></script>
+
+    <script type="text/javascript" src="./js/TweenMax.js"></script>
+    <script type="text/javascript" src="./js/hc-offcanvas-nav.js"></script>
+    
+    <script type="text/javascript" src="./js/less.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    <title>profile</title>
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left aui-btn" >
+            <span id="menu" class="aui-iconfont aui-icon-menu"></span>
+        </a>
+        <div class="aui-title">profile</div>
+        <a class="aui-pull-right aui-btn">
+            <span class="aui-iconfont aui-icon-search"></span>
+        </a>
+    </header>
+    <!-- banner页面 -->
+    <!-- backgroundImage的vue绑定设置 -->
+    <div class="pro_bg" id="bg" :style="{backgroundImage:'url('+bg.bg_pic+')'}">   
+            <div class="pro_tx" :style="{backgroundImage:'url('+bg.pic+')'}"></div>
+            <span class="name">{{bg.name}}</span>
+            <span class="locat"">{{bg.time}}</span>
+    </div>
+    <!-- 图片列表 -->
+    <a href="#" class="pro_more">
+        <span>30 Photo</span>
+        <span>View All></span>
+    </a>
+    <div class="aui-list-item-inner" >
+        <div class="aui-row aui-row-padded"style="width:99%;margin:5% auto;">
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="pro_more">
+        <span>30 Photo</span>
+        <span>View All></span>
+    </a>
+    <div class="aui-list-item-inner" >
+        <div class="aui-row aui-row-padded" style="width:99%;margin:5% auto;">
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+            <div class="aui-col-xs-4">
+                <img src="./img/demo1.png"/>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边栏 -->
+    <nav id="main-nav">
+            <ul class="first-nav">
+              <li class="cryptocurrency">
+                <a href="#">Cryptocurrency</a>
+              </li>
+            </ul>
+    </nav>
+
+</div>
+
+</body>
+</html>

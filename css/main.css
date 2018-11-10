@@ -1,33 +1,5 @@
-* {
-  margin: 0 0;
-  padding: 0 0;
-}
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-.bg_ban {
-  position: relative;
-  width: 100%;
-  height: 35%;
-  background-color: red;
-  background-image: url("../img/new_top.png");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-.bg_ban .ban_title {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 3.5rem;
-  color: white;
-}
-.bg_ban .ban_title .pic {
+.tx_icon {
   display: inline-block;
-  float: left;
-  margin: 0.3rem;
   width: 3rem;
   height: 2.8rem;
   background-color: #fff;
@@ -37,11 +9,42 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-.bg_ban .ban_title .title {
+.bg_ban {
+  position: relative;
+  width: 100%;
+  height: 35%;
+  background-color: red;
+  background-image: url("../img/new_top.png");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  color: white;
+}
+.ban_title {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 3.5rem;
+  color: white;
+}
+.ban_title .pic {
+  float: left;
+  margin: 0.3rem;
+  display: inline-block;
+  width: 3rem;
+  height: 2.8rem;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url("../img/tx.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ban_title .title {
   display: block;
   font-size: 1.3rem;
 }
-.bg_ban .ban_title .time {
+.ban_title .time {
   float: right;
   font-size: 0.8rem;
   margin-right: 0.5rem;
@@ -84,4 +87,272 @@ body {
 }
 .card_list .c_time {
   font-size: 0.7rem;
+}
+.feed_list,
+.fd_list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 20%;
+  overflow: auto;
+}
+.feed_list li,
+.fd_list li {
+  position: relative;
+  width: 100%;
+  height: 45%;
+  overflow: auto;
+}
+.feed_list .d_pic,
+.fd_list .d_pic {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  background-image: url('../img/air_port.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.feed_list .d_pic .d_tx,
+.fd_list .d_pic .d_tx {
+  position: absolute;
+  bottom: -1rem;
+  left: 1rem;
+}
+.feed_list .con_text,
+.fd_list .con_text {
+  width: 100%;
+  padding: 0 10%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 0.8rem;
+  bottom: -0.051rem;
+}
+.feed_list .con_text .dc_title,
+.fd_list .con_text .dc_title {
+  font-size: 1.5rem;
+}
+.feed_list .con_text .dc_content,
+.fd_list .con_text .dc_content {
+  font-size: 1.1rem;
+}
+.feed_list .con_text div,
+.fd_list .con_text div {
+  height: auto;
+  overflow: hidden;
+  display: block;
+}
+.feed_list .con_text a,
+.fd_list .con_text a {
+  display: block;
+  width: 0.8rem;
+  height: 1rem;
+}
+.feed_list .con_text .fav,
+.fd_list .con_text .fav {
+  float: left;
+  background-image: url('../img/love.png');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.feed_list .con_text .com,
+.fd_list .con_text .com {
+  float: right;
+  background-image: url('../img/comment.png');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.feed_list .con_text .d_name,
+.fd_list .con_text .d_name {
+  font-size: 1rem;
+  float: left;
+}
+.feed_list .con_text .d_time,
+.fd_list .con_text .d_time {
+  float: right;
+}
+.feed_list .ban_title,
+.fd_list .ban_title {
+  position: relative;
+  border-top: 1px solid gainsboro;
+  margin: 0.5rem auto;
+  padding: 0.8rem;
+}
+.feed_list .ban_title .pic,
+.fd_list .ban_title .pic {
+  width: 2rem;
+  height: 2rem;
+}
+.foot_contain {
+  position: fixed;
+  bottom: 0px;
+  width: 20rem;
+  height: 2.5rem;
+  border: 1px solid gainsboro;
+}
+.foot_contain input {
+  display: block;
+  float: left;
+  width: 16rem;
+  height: 2.5rem;
+  background-color: #e1e1e1;
+}
+.foot_contain .re_btn {
+  display: inline;
+  float: right;
+  width: 3.899rem;
+  height: 2.5rem;
+  background: linear-gradient(to right, #ff2c55, red);
+  cursor: pointer;
+  padding-left: 0.8rem;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+.pro_bg {
+  position: relative;
+  width: 100%;
+  height: 35%;
+  background-color: red;
+  background-image: url("../img/new_top.png");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+.pro_bg .pro_tx {
+  position: relative;
+  margin-top: 3rem;
+  display: inline-block;
+  width: 3rem;
+  height: 2.8rem;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url("../img/tx.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+}
+.pro_bg span {
+  display: block;
+}
+.pro_bg .name {
+  font-size: 1.1rem;
+}
+.pro_more {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  border: 1px solid gainsboro;
+  color: black;
+}
+.pro_more span {
+  display: block;
+  height: 100%;
+  line-height: 100%;
+  margin: 2.5%;
+}
+.pro_more span:nth-child(1) {
+  float: left;
+}
+.pro_more span:nth-child(2) {
+  float: right;
+}
+.fd_list .t_list {
+  position: relative;
+  width: 17.5rem;
+  float: right;
+  padding: 1rem 1rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid gainsboro;
+}
+.fd_list .t_list .tx {
+  display: inline-block;
+  width: 3rem;
+  height: 2.8rem;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url("../img/tx.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -1rem;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
+}
+.fd_list .t_list .d_name {
+  font-weight: bold;
+}
+.fd_list .t_list .d_time {
+  margin-top: 3%;
+  font-size: 0.7rem;
+}
+.fd_list .t_list .com_ico {
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 0.8rem;
+}
+.peo_more {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  border: 1px solid gainsboro;
+  color: black;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+}
+.peo_more span {
+  display: block;
+  height: 100%;
+  line-height: 100%;
+  margin: 2.5%;
+}
+.peo_more span:nth-child(1) {
+  float: left;
+}
+.peo_more span:nth-child(2) {
+  float: right;
+}
+.peo_more span {
+  width: 100%;
+}
+.invite {
+  display: block;
+  margin: 0 auto;
+  width: 10rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 2rem;
+  color: black;
+  background: linear-gradient(to right, #ff2c55, red);
+  position: relative;
+  margin-top: 3.5rem;
+  color: white;
+  font-weight: bold;
+}
+.invite span {
+  width: 10rem;
+  height: 100%;
+  line-height: 50%;
+}
+.p_con {
+  text-align: center;
+}
+.p_tx {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2.5rem;
+  background-image: url("../img/demo1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

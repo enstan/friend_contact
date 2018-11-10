@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/aui.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
-    
+
     <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+
     <script type="text/javascript" src="./js/vue.min.js"></script>
     <script type="text/javascript" src="./js/hammer.js"></script>
 
@@ -19,38 +20,47 @@
     <script type="text/javascript" src="./js/less.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 
-    <title>timeline</title>
+    <title>people</title>
 </head>
 <body>
     <div class="top" style="position:fixed;top:0;width:100%;background-color: #fff;">
-    <header class="aui-bar aui-bar-nav" style="position: relative;background-color: white;color:black;">
-        <a class="aui-pull-left aui-btn aui-btn-outlined">
-            <span id="menu" class="aui-iconfont aui-icon-menu" style="color: black;"></span>
-        </a>
-        <div class="aui-title">timeline</div>
-            <a class="aui-pull-right aui-btn aui-btn-outlined">
+        <header class="aui-bar aui-bar-nav" style="position: relative;background-color: white;color:black;">
+            <a class="aui-pull-left aui-btn aui-btn-outlined">
+                <span id="menu" class="aui-iconfont aui-icon-menu" style="color: black;"></span>
+            </a>
+    <div class="aui-title">people</div>
+        <a class="aui-pull-right aui-btn aui-btn-outlined">
             <span class="aui-iconfont aui-icon-search" style="color: black;"></span>
-        </a>
-   </header>
-   </div>
-    <section class="fd_list">
+            </a>
+        </header>
+    </div>
+    <a href="#" class="invite"><span>+Invite Friends</span></a>
+    <div class="aui-list-item-inner" >
+        <div class="aui-row aui-row-padded"style="width:99%;margin:5% auto;">
+        <div class="aui-col-xs-4 p_con" >
+            <div class="p_tx"></div>
         </div>
-        <div class="con_text t_list">
-            <div class="tx" :style="{backgroundImage:'url('+coms.pic+')'}"></div>
+        <div class="aui-col-xs-4 p_con">
+            <div class="p_tx"></div>
+        </div>
 
-            <div class="d_title">
-                <span class="d_name">{{item.name}}</span>
-                <span class="d_time">{{item.time}}</span>
+         <div class="aui-col-xs-4 p_con">
+            <div class="p_tx"></div>
+        </div>
+
+        <div class="aui-col-xs-4 p_con">
+            <div class="p_tx"></div>
+        </div>
+
+        <div class="aui-col-xs-4 p_con">
+            <div class="p_tx"></div>
+        </div>
+
+        <div class="aui-col-xs-4 p_con">
+                <div class="p_tx"></div>
             </div>
-        <div class="dc_content">{{item.text}}</div>
-        <div class="com_ico">
-                <a href="#" class="fav"></a>
-                <a href="#" class="com"></a>
+                </div>            
         </div>
-        </div>      
-
-    </section>
-
     <!-- 侧边栏 -->
     <nav id="main-nav">
             <ul class="first-nav">
@@ -59,8 +69,9 @@
               </li>
             </ul>
     </nav>
-
-</div>
-
+    
+    <div class="peo_more">
+        <span> 3 people selected</span>
+    </div>
 </body>
 </html>
