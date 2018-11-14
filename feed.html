@@ -9,19 +9,21 @@
     <link rel="stylesheet" type="text/css" href="./css/aui.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     
-    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="./js/vue.min.js"></script>
-    <script type="text/javascript" src="./js/hammer.js"></script>
+    <script type="text/javascript" src="./js/api/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/api/vue.min.js"></script>
+    <script type="text/javascript" src="./js/api/hammer.js"></script>
 
-    <script type="text/javascript" src="./js/TweenMax.js"></script>
-    <script type="text/javascript" src="./js/hc-offcanvas-nav.js"></script>
+    <script type="text/javascript" src="./js/api/TweenMax.js"></script>
+    <script type="text/javascript" src="./js/api/hc-offcanvas-nav.js"></script>
     
-    <script type="text/javascript" src="./js/less.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/api/less.js"></script>
+    <script type="text/javascript" src="./js/other.js"></script>
+
+    <script type="text/javascript" src="./js/feed.js"></script>
 
     <title>feed</title>
 </head>
-<body>
+<body id="d">
     <div class="top" style="position:fixed;top:0;width:100%;background-color: #fff;">
     <header class="aui-bar aui-bar-nav" style="position: relative;background-color: white;color:black;">
         <a class="aui-pull-left aui-btn aui-btn-outlined">
@@ -33,13 +35,13 @@
         </a>
    </header>
     <div class="aui-tab" id="tab">
-            <div class="aui-tab-item aui-active">发现</div>
-            <div class="aui-tab-item"><div></div>最受欢迎</div>
-        <div class="aui-tab-item">最近</div>
+        <div class="aui-tab-item aui-active" v-on:click="tab(1)">发现</div>
+        <div class="aui-tab-item" v-on:click="tab(2)"><div></div>最受欢迎</div>
+        <div class="aui-tab-item" v-on:click="tab(3)">最近</div>
     </div>
-</div>
-    <ul class="feed_list">
-        <li v-for="item in list">
+    </div>
+    <ul class="feed_list" style="margin-top:4.5rem;">
+        <li v-for="item in list" v-on:click="show(item)">
             <div class="d_pic" :style="{backgroundImage:'url('+item.pic+')'}">
                 <div class="d_tx tx" :style="{backgroundImage:'url('+item.tx+')'}">
                 </div>
@@ -57,8 +59,7 @@
             </div>
          </li>
     </ul>
-    <section class="fd_list" style="margin-top:15%;">
-  
+    <section class="fd_list" style="margin-top:2.25rem;">
         <div class="d_pic" :style="{backgroundImage:'url('+item.pic+')'}" style="height:40%">
             <div class="d_tx tx" :style="{backgroundImage:'url('+item.tx+')'}">
         </div>
@@ -89,17 +90,14 @@
             </div>
         </div>
     </section>
-
     <!-- 侧边栏 -->
     <nav id="main-nav">
-            <ul class="first-nav">
-              <li class="cryptocurrency">
-                <a href="#">Cryptocurrency</a>
-              </li>
-            </ul>
+        <ul class="first-nav">
+            <li class="cryptocurrency">
+            <a href="#">Cryptocurrency</a>
+            </li>
+        </ul>
     </nav>
-
 </div>
-
 </body>
 </html>

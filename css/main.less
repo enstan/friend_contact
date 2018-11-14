@@ -23,6 +23,12 @@
         line-height:50%;
     }
 }
+.top{
+    position: relative;
+    z-index: 9;
+    background-color: white;
+    color:black;
+}
 //text样式
 .tx_icon{
     display:inline-block;
@@ -39,6 +45,14 @@
     border-radius: @radius;
     .img-url(url("../img/demo1.png"),cover,center,no-repeat);
 }
+
+
+.new{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
 .bg_ban{
     position: relative;
     width: 100%;
@@ -47,7 +61,6 @@
     .img-url(url("../img/new_top.png"),cover,left,no-repeat);
     color:white;
 }
-
 .ban_title{
     position:absolute;
     bottom:0px;
@@ -296,8 +309,8 @@
     }
 }
 .invite{
-    .btn-class(10rem,2rem,null,linear-gradient(to right,rgb(255,44,85),red),2rem);
     position: relative;
+    .btn-class(10rem,2rem,null,linear-gradient(to right,rgb(255,44,85),red),2rem);
     margin-top:3.5rem;
     color:white;
     font-weight: bold;
@@ -308,6 +321,67 @@
 .p_tx{
     .tx_icon(4rem,4rem,url("../img/demo1.png"),2.5rem);
 }
-.comlist{
-   // height:60%;
+
+//登录注册页面
+.login_p{
+    background:-webkit-linear-gradient(gainsboro,white);
+    text-align: center;
+    position: absolute;
+    z-index: 999;
+    top:0;
+    width: 100%;
+    height: 100%;
+    font-size:1rem;
+
+    input{
+        width: 90%;
+        height: 100%;
+        border:0px;
+        font-size:1rem;
+        background-color: transparent;
+    }
+ 
+    .user,.password,.login{
+         display:block;
+         margin:0 auto;
+         width: 60%;
+         height:2.5rem;
+        border-radius: 2rem;
+        border:1px solid black;
+        margin-top:8%;
+    }
+    .user{
+        margin-top:60%;
+    }
+    .login{
+        line-height: 2rem;
+        border:none;
+        background:rgb(94,112,218);
+        color:white;
+        box-shadow: 0px 5px 5px #888888;        
+    }
+    .sign{
+        display:block;
+        margin-top:1rem;
+    }
+}
+.reg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+
+//new_detail section部分
+#news_app{
+    position: absolute;
+}
+.new_detail{
+    width: 100%;
+    height:100%;
+    margin-top:10%;
+    position: absolute;
+    display: block;
+    overflow: hidden;
 }

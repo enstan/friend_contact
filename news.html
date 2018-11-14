@@ -4,65 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/hc-offcanvas-nav.css" />
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/aui.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
 
-    <script src="./js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="./js/hc-offcanvas-nav.js"></script>
-    <script type="text/javascript" src="./js/vue.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-    <script src="./js/less.js"></script>
+    <script src="./js/api/jquery-1.11.1.min.js"></script>
+    <script src="./js/api/hc-offcanvas-nav.js"></script>
+    <script src="./js/api/TweenMax.js"></script>
+    <script src="./js/api/vue.min.js"></script>
+    <script src="./js/api/hammer.js"></script>
+    <script src="./js/other.js"></script>
+    <script src="./js/api/less.js"></script>
 
-    <title>Document</title>
+    <script src="./js/api/api.js"></script>
+    <script src="./js/main.js"></script>
+
+    <title>news</title>
 </head>
-<body>
+<body id="news_app">
     <header class="aui-bar aui-bar-nav">
-        <a class="aui-pull-left aui-btn aui-btn-outlined">
-            <span class="aui-iconfont aui-icon-menu"></span>
+        <a class="aui-pull-left aui-btn">
+            <span id="menu" class="aui-iconfont aui-icon-menu"></span>
         </a>
         <div class="aui-title">News</div>
-        <a class="aui-pull-right aui-btn aui-btn-outlined">
-            <span class="aui-iconfont aui-icon-search"></span>
+        <a class="aui-pull-right aui-btn">
+            <span id="search" class="aui-iconfont aui-icon-search"></span>
         </a>
     </header>
     <!-- banner页面 -->
     <!-- backgroundImage的vue绑定设置 -->
-    <div class="bg_ban" id="bg" :style="{backgroundImage:'url('+bg.bg_pic+')'}">   
-        <div class="ban_title">
-            <div class="pic" :style="{backgroundImage:'url('+bg.pic+')'}"></div>
-            <span class="title">{{bg.title}}</span>
-            <span class="name">{{bg.name}}</span>
-            <span class="time">{{bg.time}}</span>
-        </div> 
-
-    </div>
-        <ul class="card_list">
-            <li v-for="item in list">
-                <div class="con_pic" :style="{backgroundImage:'url('+item.pic+')'}"></div>
-                <span class="c_title">{{item.title}}</span>
-                <span class="c_text">{{item.text}}</span>
-                <span class="c_time">{{item.time}}</span>
-            </li>
+    <section class="new">
+        <div class="bg_ban" id="bg" :style="{backgroundImage:'url('+bg.bg_pic+')'}">   
+            <div class="ban_title">
+                <div class="pic" :style="{backgroundImage:'url('+bg.pic+')'}"></div>
+                <span class="title">{{bg.title}}</span>
+                <span class="name">{{bg.name}}</span>
+                <span class="time">{{bg.time}}</span>
+            </div> 
+    
+        </div>
+            <ul class="card_list">
+                <li v-for="item in list" v-on:click="swip(item)">
+                    <div class="con_pic" :style="{backgroundImage:'url('+item.pic+')'}"></div>
+                    <span class="c_title">{{item.title}}</span>
+                    <span class="c_text">{{item.text}}</span>
+                    <span class="c_time">{{item.time}}</span>
+                </li>
+            </ul>
+        </section>
+        <footer class="aui-bar aui-bar-tab" id="footer">
+            <div class="new_footer">
+            <div class="aui-bar-tab-item aui-active"v-on:click="index" tapmode>
+                    <i class="aui-iconfont aui-icon-home"></i>
+                </div>
+                <div class="aui-bar-tab-item aui-active"v-on:click="feed" tapmode>
+                    <i class="aui-iconfont aui-icon-calendar"></i>
+                </div>
+                <div class="aui-bar-tab-item aui-active"v-on:click="edit" tapmode>
+                    <i class="aui-iconfont aui-icon-edit"></i>
+                </div>
+                <div class="aui-bar-tab-item aui-active"v-on:click="people" tapmode>
+                    <i class="aui-iconfont aui-icon-my"></i>
+                </div>
+                <div class="aui-bar-tab-item aui-active"v-on:click="setting" tapmode>
+                    <i class="aui-iconfont aui-icon-gear"></i>
+                </div>                
+            </div>
+            <div class="detail_footer">
+            <div class="aui-bar-tab-item aui-active" tapmode>
+                    <i class="aui-iconfont aui-icon-left"></i>
+                </div>
+                <div class="aui-bar-tab-item aui-active" tapmode>
+                    <i class="aui-iconfont aui-icon-share"></i>
+                </div>
+                <div class="aui-bar-tab-item aui-active" tapmode>
+                    <i class="aui-iconfont aui-icon-comment"></i>
+                </div>
+                <div class="aui-bar-tab-item aui-active" tapmode>
+                    <i class="aui-iconfont aui-icon-right"></i>
+                </div>                
+            </div>
+        </footer>
+  
+    <section class="fd_list new_detail">
+        <div class="d_pic" :style="{backgroundImage:'url('+item.pic+')'}" style="height:40%">
+            <div class="d_tx tx" :style="{backgroundImage:'url('+item.tx+')'}">
+        </div>
+        </div>
+        <div class="con_text">
+            <div class="d_title">
+                <span class="d_name">{{item.name}}</span>
+                <span class="d_time">{{item.time}}</span>
+            </div>
+        <div class="dc_title">{{item.text}}</div>
+        <div class="dc_content">{{item.content}}</div>
+        <div class="com_ico">
+                <a href="#" class="fav"></a>
+                <a href="#" class="com"></a>
+        </div>
+        </div>      
+    </section>
+     <!-- 侧边栏 -->
+     <nav id="main-nav">
+        <ul class="first-nav">
+          <li class="cryptocurrency">
+            <a href="#">Cryptocurrency</a>
+          </li>
         </ul>
-
-    <footer class="aui-bar aui-bar-tab" id="footer">
-        <div class="aui-bar-tab-item aui-active" tapmode>
-            <i class="aui-iconfont aui-icon-home"></i>
-        </div>
-        <div class="aui-bar-tab-item aui-active" tapmode>
-            <i class="aui-iconfont aui-icon-calendar"></i>
-        </div>
-        <div class="aui-bar-tab-item aui-active" tapmode>
-            <i class="aui-iconfont aui-icon-edit"></i>
-        </div>
-        <div class="aui-bar-tab-item aui-active" tapmode>
-            <i class="aui-iconfont aui-icon-my"></i>
-        </div>
-        <div class="aui-bar-tab-item aui-active" tapmode>
-            <i class="aui-iconfont aui-icon-gear"></i>
-        </div>
-    </footer>
+     </nav>
 </body>
 </html>

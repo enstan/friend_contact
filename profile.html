@@ -9,16 +9,17 @@
     <link rel="stylesheet" type="text/css" href="./css/aui.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
 
-    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/api/jquery-1.11.1.min.js"></script>
 
-    <script type="text/javascript" src="./js/vue.min.js"></script>
-    <script type="text/javascript" src="./js/hammer.js"></script>
+    <script type="text/javascript" src="./js/api/vue.min.js"></script>
+    <script type="text/javascript" src="./js/api/hammer.js"></script>
 
-    <script type="text/javascript" src="./js/TweenMax.js"></script>
-    <script type="text/javascript" src="./js/hc-offcanvas-nav.js"></script>
-    
-    <script type="text/javascript" src="./js/less.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/api/TweenMax.js"></script>
+    <script type="text/javascript" src="./js/api/hc-offcanvas-nav.js"></script>
+    <script type="text/javascript" src="./js/api/less.js"></script>
+
+    <script type="text/javascript" src="./js/other.js"></script>
+    <script type="text/javascript" src="./js/profile.js"></script>
 
     <title>profile</title>
 </head>
@@ -39,36 +40,24 @@
             <span class="name">{{bg.name}}</span>
             <span class="locat"">{{bg.time}}</span>
     </div>
+    <div class="content">
     <!-- 图片列表 -->
-    <a href="#" class="pro_more">
-        <span>30 Photo</span>
+    <div class="sec_photo">
+    <a href="#" id="ph_link" class="pro_more">
+        <span>{{photo.num}} Photo</span>
         <span>View All></span>
     </a>
-    <div class="aui-list-item-inner" >
+    <div class="aui-list-item-inner" id="pho_list">
         <div class="aui-row aui-row-padded"style="width:99%;margin:5% auto;">
-            <div class="aui-col-xs-4">
-                <img src="./img/demo1.png"/>
-            </div>
-            <div class="aui-col-xs-4">
-                <img src="./img/demo1.png"/>
-            </div>
-            <div class="aui-col-xs-4">
-                <img src="./img/demo1.png"/>
-            </div>
-            <div class="aui-col-xs-4">
-                <img src="./img/demo1.png"/>
-            </div>
-            <div class="aui-col-xs-4">
-                <img src="./img/demo1.png"/>
-            </div>
             <div class="aui-col-xs-4">
                 <img src="./img/demo1.png"/>
             </div>
         </div>
     </div>
-
-    <a href="#" class="pro_more">
-        <span>30 Photo</span>
+    </div>
+    <div class="sec_video">
+    <a href="#" class="pro_more" id="vi_link">
+        <span>{{video.num}} Video</span>
         <span>View All></span>
     </a>
     <div class="aui-list-item-inner" >
@@ -93,6 +82,9 @@
             </div>
         </div>
     </div>
+    </div>
+    </div>
+
     <!-- 侧边栏 -->
     <nav id="main-nav">
             <ul class="first-nav">

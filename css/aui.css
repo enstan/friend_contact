@@ -1563,8 +1563,8 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .aui-active:hover{
     /* 背景颜色渐变 top left为左上*/
-    background-color:linear-gradient(to right,rgb(255,45,85), rgb(255,59,48));   
-    background-color:rgb(255,45,85);   
+    /* background-color:linear-gradient(to right,rgb(255,45,85), rgb(255,59,48));   
+    background-color:rgb(255,45,85);    */
 }
 .aui-bar-tab .aui-bar-tab-item .aui-iconfont {
 	position: relative;
